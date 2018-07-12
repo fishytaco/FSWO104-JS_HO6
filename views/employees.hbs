@@ -1,0 +1,14 @@
+<h1>View Employee!</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Employee ID</th>
+    </tr>
+    {{#each employees}}
+    <tr>
+        <td><a href="/employees/{{EmployeeId}}"><h3>{{FirstName}} {{LastName}}</h3></td>
+        <td>{{EmployeeId}}</td>
+    </tr>
+    {{/each}}
+</table>

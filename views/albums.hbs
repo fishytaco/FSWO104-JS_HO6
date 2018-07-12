@@ -1,0 +1,40 @@
+<h1>Add a new album!</h1>
+
+<form action="/albums" method="POST">
+    <div>
+        <label for="name">Title: </label>
+        <input type="text" name="title">
+    </div>
+
+    <div>
+        <label for="artist">Artist: </label>
+        <input type="text" name="artist">
+    </div>
+
+     <div>
+        <label for="yearReleased">Year Released: </label>
+        <input type="text" name="yearReleased">
+    </div>
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+</form>
+
+{{!-- {{#each albums}}
+<h3>{{Title}}</h3>
+{{/each}} --}}
+
+<table>
+    <tr>
+        <th>Album Name</th>
+        <th>Artist ID</th>
+        <th>Year Released</th>
+    </tr>
+    {{#each albums}}
+    <tr>
+        <td><a href="/albums/{{AlbumId}}"><h3>{{Title}}</h3></td>
+        <td>{{ArtistId}}</td>
+        <td>{{YearReleased}}</td> 
+    </tr>
+    {{/each}}
+</table>

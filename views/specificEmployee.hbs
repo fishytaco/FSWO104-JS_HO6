@@ -1,0 +1,16 @@
+<h1>First Name: {{FirstName}}</h1>
+<h2>Last Name: {{LastName}}</h2>
+<h2>ID: {{EmployeeId}}</h2>
+<script>
+    
+    function onDelete() {
+        $.ajax({
+            url: '/employees/{{EmployeeId}}/delete',
+            method: 'DELETE', complete: () => window.location = "/employees"
+        })
+    }
+</script>
+
+<div>
+    <button onclick="onDelete()" id="deleteButton">Delete Employee</button>
+</div>
